@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: database-migration
+spec:
+  template:
+    spec:
+      containers:
+        - name: database-migration
+          image: busybox
+          command: [ "sh", "-c" ]
+          args:
+            - "echo 'Running database migrations...'; sleep 10; echo 'Migration completed successfully!'"
+      restartPolicy: Never
