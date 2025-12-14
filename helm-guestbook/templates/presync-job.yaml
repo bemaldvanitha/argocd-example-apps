@@ -12,5 +12,5 @@ spec:
           image: busybox
           command: [ "sh", "-c" ]
           args:
-            - "echo 'Running database migrations...'; sleep 10; echo 'Migration completed successfully!'"
+            - "echo 'Running database migrations...'; sleep 30; echo 'Migration completed successfully!'"
       restartPolicy: Never
