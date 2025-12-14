@@ -13,4 +13,10 @@ spec:
           command: [ "sh", "-c" ]
           args:
             - "echo 'Running database migrations...'; sleep 30; echo 'Migration completed successfully!'"
+          env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: db-config
+                  key: host
       restartPolicy: Never
