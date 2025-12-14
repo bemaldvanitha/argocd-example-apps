@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: database-migration
   argocd.argoproj.io/hook: PreSync
+  argocd.argoproj.io/hook-delete-policy: BeforeHookCreation,HookSucceeded
 spec:
   template:
     spec:
